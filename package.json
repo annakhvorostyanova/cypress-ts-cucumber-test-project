@@ -1,0 +1,70 @@
+{
+  "name": "cypress-cucumber-example",
+  "version": "1.0.0",
+  "description": "An example for Cypress and Cucumber usage",
+  "main": "index.js",
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env", "@babel/preset-react"
+          ]
+        }
+      ]
+    ]
+  },
+  "scripts": {
+    "cypress:open:local": "CYPRESS_ENV=localhost npm run cypress:open",
+    "cypress:open:prod": "CYPRESS_ENV=production npm run cypress:open",
+    "cypress:open": "cypress open",
+    "test:local": "CYPRESS_ENV=localhost npm run test",
+    "test:prod": "CYPRESS_ENV=production npm run test",
+    "test": "cypress run --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'",
+    "test:debug:local": "CYPRESS_ENV=localhost npm run test:debug",
+    "test:debug:prod": "CYPRESS_ENV=production npm run test:debug",
+    "test:debug": "cypress run --headed --browser chrome --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'"
+  },
+  "author": "Anna",
+  "license": "Private",
+  "dependencies": {
+    "@cypress/browserify-preprocessor": "^3.0.1",
+    "axios": "^0.21.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-native": "^4.0.1",
+    "cucumber": "^7.0.0-rc.0",
+    "cypress": "^6.9.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.1.6",
+    "tsify": "^5.0.4",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.10",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^7.15.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^7.0.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.2.0",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
+  }
+}
