@@ -3,7 +3,7 @@ import MainPage from "../../../../pages/test-site/MainPage";
 import SixthYearPage from '../../../../pages/test-site/SixthYearPage';
 
 When(/^I open the main page$/, () => {
-  MainPage.visit();
+  MainPage.openTermSix();
 });
 Then(/^I see all the elements on the main page$/, () => {
   MainPage.checkElementsOnThePage();
