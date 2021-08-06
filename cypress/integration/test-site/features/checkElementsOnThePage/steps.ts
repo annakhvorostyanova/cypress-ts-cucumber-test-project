@@ -7,19 +7,23 @@ import ThirdSemesterPage from '../../../../pages/test-site/ThirdSemesterPage';
 import FourthSemesterPage from '../../../../pages/test-site/FourthSemesterPage';
 import FifthSemesterPage from '../../../../pages/test-site/FifthSemesterPage';
 import SixthSemesterPage from '../../../../pages/test-site/SixthSemesterPage';
+import SixthYearPage from '../../../../pages/test-site/SixthYearPage';
 
 When(/^I open the main page$/, () => {
-  MainPage.visit();
+  MainPage.openTermSix();
 });
 Then(/^I see all the elements on the main page$/, () => {
   MainPage.checkElementsOnThePage();
 });
 
-When(/^I open the fifth course page$/, () => {
-  MainPage.openTermNineTen();
+When(/^I open the sixth year section$/, () => {
+  cy.visit('/');
+ 
 });
-Then(/^I see all the elements on the fifth course page$/, () => {
-  FifthCoursePage.checkElementsOnThePage();
+Then(/^I see all the elements on the sixth year section page$/, () => {
+  SixthYearPage.checkElementsVisibility();
+  
+  console.log('checking')
 });
 
 When(/^I open the first semester page$/, () => {
