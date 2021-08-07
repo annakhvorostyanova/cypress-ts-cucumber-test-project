@@ -1,12 +1,13 @@
 import { When, Then } from 'cypress-cucumber-preprocessor/steps';
 import MainPage from "../../../../pages/test-site/MainPage";
-import FifthCoursePage from '../../../../pages/test-site/FifthCoursePage';
+import FifthYearPage from '../../../../pages/test-site/FifthYearPage';
 import FirstSemesterPage from '../../../../pages/test-site/FirstSemeterPage';
 import SecondSemesterPage from '../../../../pages/test-site/SecondSemeterPage';
 import ThirdSemesterPage from '../../../../pages/test-site/ThirdSemesterPage';
 import FourthSemesterPage from '../../../../pages/test-site/FourthSemesterPage';
 import FifthSemesterPage from '../../../../pages/test-site/FifthSemesterPage';
 import SixthSemesterPage from '../../../../pages/test-site/SixthSemesterPage';
+import FourthYearPage from '../../../../pages/test-site/FourthYearPage';
 import SixthYearPage from '../../../../pages/test-site/SixthYearPage';
 
 When(/^I open the main page$/, () => {
@@ -16,19 +17,15 @@ Then(/^I see all the elements on the main page$/, () => {
   MainPage.checkElementsOnThePage();
 });
 
-When(/^I open the fifth course page$/, () => {
+When(/^I open the fifth year page$/, () => {
+  MainPage.visit();
   MainPage.openTermNineTen();
 });
-Then(/^I see all the elements on the fifth course page$/, () => {
-  FifthCoursePage.checkElementsOnThePage();
+Then(/^I see all the elements on the fifth year page$/, () => {
+  FifthYearPage.checkElementsOnThePage();
 });
 
-When(/^I open the sixth year section$/, () => {
-  MainPage.openTermSix(); 
-});
-Then(/^I see all the elements on the sixth year section page$/, () => {
-  SixthYearPage.checkElementsVisibility();
-});
+
 
 When(/^I open the first semester page$/, () => {
   MainPage.visit();
@@ -76,4 +73,20 @@ When(/^I open the sixth semester page$/, () => {
 });
 Then(/^I see all the elements on the sixth semester page$/, () => {
   SixthSemesterPage.checkElementsOnThePage();
+});
+
+When(/^I open the fourth year page$/, () => {
+  MainPage.visit();
+  MainPage.openTermSevenEight();
+});
+Then(/^I see all the elements on the fourth year page$/, () => {
+  FourthYearPage.checkElementsOnThePage();
+});
+
+When(/^I open the sixth year page$/, () => {
+  MainPage.visit();
+  MainPage.openTermElevenTwelve();
+});
+Then(/^I see all the elements on the sixth year page$/, () => {
+  SixthYearPage.checkElementsOnThePage();
 });
