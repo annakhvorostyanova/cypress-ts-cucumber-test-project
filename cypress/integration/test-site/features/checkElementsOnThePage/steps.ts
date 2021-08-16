@@ -51,6 +51,9 @@ Then(/^I see all the elements on the fourth semester page$/, () => {
 Then(/^I see all the titles on the fourth semester page$/, () => {
   FourthSemesterPage.checkTitlesOnThePage();
 });
+Then(/^I see all the titles on the fourth semester page are correct$/, () => {
+  FourthSemesterPage.checkTitleValuesOnThePage();
+});
 
 When(/^I open the fifth semester page$/, () => {
   MainPage.visit();
@@ -61,6 +64,9 @@ Then(/^I see all the elements on the fifth semester page$/, () => {
 });
 Then(/^I see all the titles on the fifth semester page$/, () => {
   FifthSemesterPage.checkTitlesOnThePage();
+});
+Then(/^I see all the titles on the fifth semester page are correct$/, () => {
+  FifthSemesterPage.checkTitleValuesOnThePage();
 });
 
 When(/^I open the sixth semester page$/, () => {

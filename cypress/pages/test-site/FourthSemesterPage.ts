@@ -28,14 +28,30 @@ class FourthSemesterPage extends BasePage {
     this.checkElementVisible(TITLE5);
   }
 
+  static checkTitleValuesOnThePage() {
+    cy.get(TITLE1).should(($title) => {
+      expect($title.text()).equal('ბიოქიმია-ნესტანის მოცემული ');
+    });
+    cy.get(TITLE2).should(($title) => {
+      expect($title.text()).equal('ტოპანატომია');
+    });
+    cy.get(TITLE3).should(($title) => {
+      expect($title.text()).equal('ფიზიოლოგია II');
+    });
+    cy.get(TITLE4).should(($title) => {
+      expect($title.text()).equal('გენეტიკა II');
+    });
+    cy.get(TITLE5).should(($title) => {
+      expect($title.text()).equal('მიკრობიოლოგია');
+    });
+  }
+
   static openSubjectOne() {
     this.checkElementVisible(TITLE1).click();
   }
-
   static openSubjectTwo() {
     this.checkElementVisible(TITLE2).click();
   }
-  
   static openSubjectThree() {
     this.checkElementVisible(TITLE3).click();
   } 
@@ -45,7 +61,6 @@ class FourthSemesterPage extends BasePage {
   static openSubjectFive() {
     this.checkElementVisible(TITLE5).click();
   }
-  
 }
 
 export default FourthSemesterPage;
