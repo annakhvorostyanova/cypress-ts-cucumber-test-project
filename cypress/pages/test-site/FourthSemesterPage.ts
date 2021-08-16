@@ -5,7 +5,11 @@ const SUBJECT2 = '.subjinterm4.bg-top';
 const SUBJECT3 = '.subjinterm4.bg-fiziologia';
 const SUBJECT4 = '.subjinterm4.bg-genetics'; 
 const SUBJECT5 = '.subjinterm4.bg-microbiology'; 
- 
+const TITLE1 = '.subjects.subjinterm4.bg-bioqimia > a:nth-child(2) > div'; 
+const TITLE2 = '.subjects.subjinterm4.bg-top > a:nth-child(2) > div'; 
+const TITLE3 = '.subjects.subjinterm4.bg-fiziologia > a:nth-child(2) > div'; 
+const TITLE4 = '.subjinterm4.bg-genetics > a:nth-child(2) > div'; 
+const TITLE5 = '.subjects.subjinterm4.bg-microbiology > a:nth-child(2) > div'; 
 
 class FourthSemesterPage extends BasePage {
   static checkElementsOnThePage() {
@@ -16,22 +20,30 @@ class FourthSemesterPage extends BasePage {
     this.checkElementVisible(SUBJECT5);
   }
 
+  static checkTitlesOnThePage() {
+    this.checkElementVisible(TITLE1);
+    this.checkElementVisible(TITLE2);
+    this.checkElementVisible(TITLE3);
+    this.checkElementVisible(TITLE4);
+    this.checkElementVisible(TITLE5);
+  }
+
   static openSubjectOne() {
-    this.checkElementVisible(SUBJECT1).click();
+    this.checkElementVisible(TITLE1).click();
   }
 
   static openSubjectTwo() {
-    this.checkElementVisible(SUBJECT2).click();
+    this.checkElementVisible(TITLE2).click();
   }
   
   static openSubjectThree() {
-    this.checkElementVisible(SUBJECT3).click();
+    this.checkElementVisible(TITLE3).click();
   } 
   static openSubjectFour() {
-    this.checkElementVisible(SUBJECT4).click();
+    this.checkElementVisible(TITLE4).click();
   }
   static openSubjectFive() {
-    this.checkElementVisible(SUBJECT5).click();
+    this.checkElementVisible(TITLE5).click();
   }
   
 }
