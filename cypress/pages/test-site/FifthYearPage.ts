@@ -1,12 +1,12 @@
 import { BasePage } from "../BasePage";
 
 
-const SUBJECT1 = '.subjinterm7-8.bg-jandacva';
-const SUBJECT2 = '.subjinterm7-8.bg-surgery';
-const SUBJECT3 = '.subjinterm7-8.bg-therapy';
-const SUBJECT4 = '.subjinterm7-8.bg-forensic';
-const SUBJECT5 = '.subjinterm7-8.bg-forensic'; 
-const SUBJECT6 = '.subjinterm7-8.bg-infective';
+const SUBJECT1 = '.subjinterm9-10.bg-jandacva';
+const SUBJECT2 = '.subjinterm9-10.bg-surgery';
+const SUBJECT3 = '.subjinterm9-10.bg-therapy';
+const SUBJECT4 = '.subjinterm9-10.bg-forensic';
+const SUBJECT5 = '.subjinterm9-10.bg-forensic'; 
+const SUBJECT6 = '.subjinterm9-10.bg-infective';
 
 class FifthYearPage extends BasePage {
   static checkElementsOnThePage() {

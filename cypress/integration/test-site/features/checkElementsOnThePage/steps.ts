@@ -17,16 +17,6 @@ Then(/^I see all the elements on the main page$/, () => {
   MainPage.checkElementsOnThePage();
 });
 
-// When(/^I open the fifth year page$/, () => {
-//   MainPage.visit();
-//   MainPage.openTermNineTen();
-// });
-// Then(/^I see all the elements on the fifth year page$/, () => {
-//   FifthYearPage.checkElementsOnThePage();
-// });
-
-
-
 When(/^I open the first semester page$/, () => {
   MainPage.visit();
   MainPage.openTermOne();
@@ -58,6 +48,9 @@ When(/^I open the fourth semester page$/, () => {
 Then(/^I see all the elements on the fourth semester page$/, () => {
   FourthSemesterPage.checkElementsOnThePage();
 });
+Then(/^I see all the titles on the fourth semester page$/, () => {
+  FourthSemesterPage.checkTitlesOnThePage();
+});
 
 When(/^I open the fifth semester page$/, () => {
   MainPage.visit();
@@ -65,6 +58,9 @@ When(/^I open the fifth semester page$/, () => {
 });
 Then(/^I see all the elements on the fifth semester page$/, () => {
   FifthSemesterPage.checkElementsOnThePage();
+});
+Then(/^I see all the titles on the fifth semester page$/, () => {
+  FifthSemesterPage.checkTitlesOnThePage();
 });
 
 When(/^I open the sixth semester page$/, () => {
