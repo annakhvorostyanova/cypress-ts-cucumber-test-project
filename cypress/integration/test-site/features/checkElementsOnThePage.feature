@@ -8,9 +8,14 @@ Feature: Check all elements in the Page
   Scenario: I check all the elements on the second semester page
     When I open the second semester page
     Then I see all the elements on the second semester page
+      Then I see all the titles on the second semester page
+      Then I see all the titles on the second semester page are correct
+
   Scenario: I check all the elements on the third semester page
     When I open the third semester page
     Then I see all the elements on the third semester page
+      Then I see all the titles on the third semester page
+      Then I see all the titles on the third semester page are correct
   Scenario: I check all the elements on the fourth semester page
     When I open the fourth semester page
     Then I see all the elements on the fourth semester page
@@ -25,7 +30,7 @@ Feature: Check all elements in the Page
     Then I see all the elements on the fourth year page
   Scenario: I check all the elements on fifth year page
     When I open the fifth year page
-    Then I see all the elements on the fifth year year page
+    Then I see all the elements on the fifth year page
   Scenario: I check all the elements on sixth year page
     When I open the sixth year page
-    Then I see all the elements on the sixth year year page
+    Then I see all the elements on the sixth year page
