@@ -19,7 +19,6 @@ const TITLE7 = '.subjinterm5.subjects.subjinterm5.bg-pathphysiology > a:nth-chil
 const TITLE8 = '.subjinterm5:nth-child(13) > a:nth-child(2) > div'; 
 const TITLE9 = '.subjinterm5:nth-child(14) > a:nth-child(2) > div'; 
 
-
 class FifthSemesterPage extends BasePage {
   static checkElementsOnThePage() {
     this.checkElementVisible(SUBJECT1);
