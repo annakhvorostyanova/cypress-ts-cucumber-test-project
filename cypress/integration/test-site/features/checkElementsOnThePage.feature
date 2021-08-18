@@ -18,11 +18,13 @@ Feature: Check all elements in the Page
   Scenario: I check all the elements on the fourth semester page
     When I open the fourth semester page
     Then I see all the elements on the fourth semester page
-	  Then I see all the titles on the fourth semester page
+    Then I see all the titles on the fourth semester page
+    Then I see all the titles on the fourth semester page are correct
   Scenario: I check all the elements on the fifth semester page
     When I open the fifth semester page
     Then I see all the elements on the fifth semester page
-	  Then I see all the titles on the fifth semester page
+    Then I see all the titles on the fifth semester page
+    Then I see all the titles on the fifth semester page are correct
   Scenario: I check all the elements on the sixth semester page
     When I open the sixth semester page
     Then I see all the elements on the sixth semester page

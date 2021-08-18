@@ -18,7 +18,6 @@ const TITLE6 = '.subjinterm5:nth-child(21) > a:nth-child(2) > div';
 const TITLE7 = '.subjinterm5.subjects.subjinterm5.bg-pathphysiology > a:nth-child(2) > div'; 
 const TITLE8 = '.subjinterm5:nth-child(13) > a:nth-child(2) > div'; 
 const TITLE9 = '.subjinterm5:nth-child(14) > a:nth-child(2) > div'; 
- 
 
 class FifthSemesterPage extends BasePage {
   static checkElementsOnThePage() {
@@ -44,6 +43,38 @@ class FifthSemesterPage extends BasePage {
     this.checkElementVisible(TITLE8);
     this.checkElementVisible(TITLE9);
   }
+
+  static checkTitleValuesOnThePage() {
+    cy.get(TITLE1).should(($title) => {
+      expect($title.text()).equal('ტოპანატომია II');
+    });
+    cy.get(TITLE2).should(($title) => {
+      expect($title.text()).equal('პათანატომია');
+    });
+    cy.get(TITLE3).should(($title) => {
+      expect($title.text()).equal('იმუნოლოგია');
+    });
+    cy.get(TITLE4).should(($title) => {
+      expect($title.text()).equal('ფარმაკოლოგია 800 ');
+    });
+    cy.get(TITLE5).should(($title) => {
+      expect($title.text()).equal('ფარმაკოლოგია სტომატოლოგებისთვის');
+    });
+    cy.get(TITLE6).should(($title) => {
+      expect($title.text()).equal('მიკრობიოლოგია II ვირუსოლოგია');
+    });
+    cy.get(TITLE7).should(($title) => {
+      expect($title.text()).equal('პათ.ფიზიოლოგია');
+    });
+    cy.get(TITLE8).should(($title) => {
+      expect($title.text()).equal('ფარმაკოლოგია');
+    });
+    cy.get(TITLE9).should(($title) => {
+      expect($title.text()).equal('მიკრობიოლოგია II მთლიანი');
+    });
+
+  }
+
 
 
   static openSubjectOne() {
