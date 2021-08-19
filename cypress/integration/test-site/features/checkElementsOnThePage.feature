@@ -10,6 +10,9 @@ Feature: Check all elements in the Page
     Then I see all the elements on the second semester page
     Then I see all the titles on the second semester page
     Then I see all the titles on the second semester page are correct
+    Then I open histology exam page
+    Then I check correct answer is green and tick symbol is below
+    Then I check incorrect answer is red and cross symbol is below
   Scenario: I check all the elements on the third semester page
     When I open the third semester page
     Then I see all the elements on the third semester page
