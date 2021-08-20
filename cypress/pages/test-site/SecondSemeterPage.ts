@@ -44,6 +44,35 @@ class SecondSemesterPage extends BasePage {
     this.checkElementVisible(INCORRECT_IMG);
   }
 
+  static CountOneCorrectAnswer() {
+    let counter = 0;
+    this.checkElementVisible(INCORRECT_ANSWER1).click({force: true});
+
+    if (this.checkElementVisible(CORRECT_IMG)) {
+      counter++;
+    }
+
+    this.checkElementVisible(INCORRECT_ANSWER2).click({force: true});
+
+    if (this.checkElementVisible(CORRECT_IMG)) {
+      counter++;
+    }
+
+    this.checkElementVisible(CORRECT_ANSWER).click({force: true});
+
+    if (this.checkElementVisible(CORRECT_IMG)) {
+      counter++;
+    }
+
+    this.checkElementVisible(INCORRECT_ANSWER4).click({force: true});
+
+    if (this.checkElementVisible(CORRECT_IMG)) {
+      counter++;
+    }
+
+    expect(counter).equal(1);
+  }
+
   static openSubjectOne() {
     this.checkElementVisible(SUBJECT1).click();
   }

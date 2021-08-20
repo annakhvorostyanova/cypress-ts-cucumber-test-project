@@ -47,6 +47,9 @@ Then(/^I check correct answer is green and tick symbol is below$/, () => {
 Then(/^I check incorrect answer is red and cross symbol is below$/, () => {
   SecondSemesterPage.checkInCorrectAnswer();
 });
+Then(/^I check only one answer is correct$/, () => {
+  SecondSemesterPage.CountOneCorrectAnswer();
+});
 
 
 When(/^I open the third semester page$/, () => {
