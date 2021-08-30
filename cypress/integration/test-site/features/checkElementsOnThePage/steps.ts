@@ -38,7 +38,18 @@ Then(/^I see all the titles on the second semester page$/, () => {
 Then(/^I see all the titles on the second semester page are correct$/, () => {
   SecondSemesterPage.checkTitleValuesOnThePage();
 });
-
+Then(/^I open histology exam page$/, () => {
+  SecondSemesterPage.openSubjectOne();
+});
+Then(/^I check correct answer is green and tick symbol is below$/, () => {
+  SecondSemesterPage.checkCorrectAnswer();
+});
+Then(/^I check incorrect answer is red and cross symbol is below$/, () => {
+  SecondSemesterPage.checkInCorrectAnswer();
+});
+Then(/^I check only one answer is correct$/, () => {
+  SecondSemesterPage.CountOneCorrectAnswer();
+});
 
 
 When(/^I open the third semester page$/, () => {
